@@ -1,0 +1,258 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --panel: #f7f7f7;
+  --panel-border: #dddddd;
+  --header: #9b2433;
+  --header-text: #ffffff;
+  --table-border: #888888;
+  --button-border: #9b2433;
+  --button-text: #9b2433;
+  --button-bg: #ffffff;
+  --button-bg-strong: #9b2433;
+  --button-text-strong: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--header);
+  color: var(--header-text);
+  padding: 10px 15px;
+}
+
+nav {
+  display: inline;
+}
+
+nav a {
+  margin: 0 10px;
+  color: var(--header-text);
+  text-decoration: none;
+}
+
+nav a.activo {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+.tabla {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-juego-personajes td:last-child {
+  min-width: 240px;
+}
+
+.tabla-catalogo table {
+  min-width: 1050px;
+}
+
+.tabla-catalogo td:nth-child(4),
+.tabla-catalogo td:nth-child(5) {
+  min-width: 240px;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid var(--table-border);
+  text-align: left;
+}
+
+.imagen-animatronico {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+
+.espacio-imagen-personaje {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  place-items: center;
+  margin: auto;
+  border: 1px dashed var(--table-border);
+  color: #777777;
+  font-size: 12px;
+}
+
+th {
+  background: var(--header);
+  color: var(--header-text);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+input[type="text"].todo-input {
+  margin-bottom: 0;
+}
+
+.todo-panel {
+  margin: 20px 0;
+  padding: 15px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+}
+
+.todo-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.todo-list {
+  margin: 15px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 10px;
+  background: var(--bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+}
+
+.todo-item.completada {
+  opacity: 0.7;
+}
+
+.todo-item.completada .todo-texto {
+  text-decoration: line-through;
+}
+
+.todo-texto {
+  flex: 1;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-actions button {
+  padding: 6px 10px;
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+
+.todo-actions .completar {
+  background: var(--button-bg-strong);
+  color: var(--button-text-strong);
+}
+
+footer {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid var(--table-border);
+}
+
+body.oscuro {
+  background: #1e1e1e;
+  color: #eeeeee;
+}
+
+body.oscuro main a {
+  color: #ffd54f;
+}
+
+body.oscuro .todo-panel {
+  background: #2a2a2a;
+  border-color: #555555;
+}
+
+body.oscuro .todo-item {
+  background: #1b1b1b;
+  border-color: #555555;
+}
+
+body.oscuro input,
+body.oscuro select,
+body.oscuro textarea {
+  background: #333333;
+  color: #eeeeee;
+}
+
+body.oscuro .todo-actions button {
+  background: #333333;
+  color: #ffe0e6;
+  border-color: #d58b99;
+}
+
+body.oscuro .todo-actions .completar {
+  background: #d84f68;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    display: block;
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 0;
+  }
+
+  .todo-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

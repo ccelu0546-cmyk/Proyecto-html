@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dinos tu animatronico favorito</title>
+    <link
+      rel="icon"
+      href="https://wallpapers.com/images/thumbnail/freddy-fazbear-801-x-1280-wallpaper-0z37zzvyeow2rhod.jpg"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <strong>queremos saber que opinas</strong>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="personajes.html">Personajes</a>
+        <a href="juegos.html">Juegos</a>
+        <a href="contacto.html" class="activo">Contacto</a>
+      </nav>
+      <button id="tema" type="button">🌙 Modo oscuro</button>
+    </header>
+
+    <main>
+      <h1>Cuéntanos qué opinas</h1>
+
+      <form action="#">
+        <label for="nombre">Nombre</label><br />
+        <input type="text" id="nombre" required />
+
+        <label for="correo">Correo</label><br />
+        <input type="email" id="correo" required />
+
+        <label for="fav">Animatrónico favorito</label><br />
+        <select id="fav">
+          <option>Freddy</option>
+          <option>Bonnie</option>
+          <option>Chica</option>
+          <option>Foxy</option>
+          <option>Golden Freddy</option>
+          <option>Springtrap</option>
+          <option>Marionette</option>
+        </select>
+
+        <p>Juego favorito:</p>
+        <input type="radio" name="juego" id="j1" required />
+        <label for="j1">FNAF 1</label><br />
+        <input type="radio" name="juego" id="j2" />
+        <label for="j2">FNAF 2</label><br />
+        <input type="radio" name="juego" id="j3" />
+        <label for="j3">Sister Location</label><br />
+        <input type="radio" name="juego" id="j4" />
+        <label for="j4">ninguna de las anteriores</label>
+
+        <p>Lo que más te gusta:</p>
+        <input type="checkbox" id="c1" />
+        <label for="c1">La historia</label><br />
+        <input type="checkbox" id="c2" />
+        <label for="c2">Los jumpscares</label><br />
+        <input type="checkbox" id="c3" />
+        <label for="c3">Las teorías</label><br />
+        <input type="checkbox" id="c4" />
+        <label for="c4">los personajes</label>
+
+        <p>
+          <label for="mensaje">Mensaje</label><br />
+          <textarea id="mensaje" rows="4" required></textarea>
+        </p>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+
+    <footer>
+      Proyecto escolar de fans. Five Nights at Freddy’s pertenece a Scott
+      Cawthon.
+    </footer>
+
+    <script src="./js/script.js" defer></script>
+  </body>
+</html>
